@@ -1,0 +1,69 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.ceadigital/skip-trace-owner-phone-finder-python",
+  "title": "Skip Trace & Property / LLC Owner Phone Finder + OFAC KYB MCP",
+  "description": "Pierce anonymous real estate LLCs to human managing members, resolve verified wireless mobile phones & deliverable emails, geocode via U.S. Census, and run U.S. Treasury OFAC SDN & GLEIF LEI KYB checks.",
+  "websiteUrl": "https://ceadigital.io/tools",
+  "repository": {
+    "url": "https://github.com/ceadigital/skip-trace-owner-phone-finder-python",
+    "source": "github"
+  },
+  "version": "1.2.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ceadigital.io/mcp"
+    }
+  ],
+  "tools": [
+    {
+      "name": "skip_trace_owner_phone_finder",
+      "description": "Pierce anonymous corporate LLCs or property owner names to identify the human managing member/registered agent, resolve verified wireless mobile phone numbers and deliverable emails, geocode the parcel via U.S. Census TigerWeb, and screen against U.S. Treasury OFAC SDN and GLEIF LEI KYB registries.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "companyOrOwnerNames": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 200
+            },
+            "minItems": 1,
+            "maxItems": 25,
+            "description": "List of anonymous LLC entity names or individual property owner names to pierce and skip-trace (e.g., ['PALMETTO INDUSTRIAL HOLDINGS LLC']).",
+            "default": ["PALMETTO INDUSTRIAL HOLDINGS LLC"]
+          },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 5,
+              "maxLength": 300
+            },
+            "minItems": 1,
+            "maxItems": 25,
+            "description": "Corresponding property street addresses, cities, states, and ZIP codes (e.g., ['1201 Main St Ste 1980, Columbia, SC 29201']).",
+            "default": ["1201 Main St Ste 1980, Columbia, SC 29201"]
+          },
+          "reportType": {
+            "type": "string",
+            "enum": [
+              "skip_trace_only",
+              "pierce_llc_and_skip_trace",
+              "full_kyb_guarantor_diligence"
+            ],
+            "default": "pierce_llc_and_skip_trace",
+            "description": "Depth of enrichment: 'skip_trace_only' (phones/emails), 'pierce_llc_and_skip_trace' (adds SOS officer piercing + Census geocode), or 'full_kyb_guarantor_diligence' (adds GLEIF LEI + OFAC SDN sanctions screening)."
+          },
+          "includeLiens": {
+            "type": "boolean",
+            "default": true,
+            "description": "Include tax delinquency, pre-foreclosure, and involuntary lien risk indicators when available."
+          }
+        },
+        "required": ["companyOrOwnerNames", "addresses"]
+      }
+    }
+  ]
+}

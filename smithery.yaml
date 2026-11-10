@@ -1,0 +1,24 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: []
+    properties:
+      ceaApiKey:
+        type: string
+        default: ""
+        description: "Optional CEA Digital Unified API Key (cea_live_...). Leave blank to use the free 1-row live preview tier, or claim a $2 Tripwire Pass / $29/mo Growth Key at https://ceadigital.io/tools"
+      apifyToken:
+        type: string
+        default: ""
+        description: "Optional Apify API token to route calls through apify.com/cea_digital/skip-trace-owner-phone-finder"
+  commandFunction: |-
+    (config) => ({
+      command: 'python3',
+      args: ['mcp_server.py'],
+      env: {
+        CEA_API_KEY: config.ceaApiKey || '',
+        APIFY_TOKEN: config.apifyToken || ''
+      }
+    })
