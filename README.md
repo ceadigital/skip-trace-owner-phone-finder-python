@@ -3,8 +3,7 @@
 [![Apify Store](https://img.shields.io/badge/Apify_Store-cea__digital%2Fskip--trace--owner--phone--finder-00C853?style=flat-square)](https://apify.com/cea_digital/skip-trace-owner-phone-finder)
 [![Direct Unified Key](https://img.shields.io/badge/Direct_Unified_Key-%242_Tripwire_%7C_%2429%2Fmo-2563EB?style=flat-square)](https://ceadigital.io/tools)
 [![Run in Postman](https://img.shields.io/badge/Run_in_Postman-v2.1_Collection-FF6C37?style=flat-square&logo=postman&logoColor=white)](https://ceadigital.io/templates/postman-collection.json)
-[![Smithery MCP](https://smithery.ai/badge/@ceadigital/skip-trace-owner-phone-finder-python)](https://smithery.ai/server/@ceadigital/skip-trace-owner-phone-finder-python)
-[![Glama MCP](https://img.shields.io/badge/Glama_MCP-Grade_A_TDQS-8B5CF6?style=flat-square)](https://glama.ai/mcp/servers/@ceadigital/skip-trace-owner-phone-finder-python)
+[![Glama MCP](https://img.shields.io/badge/Glama-MCP_Directory-8B5CF6?style=flat-square)](https://glama.ai/mcp/servers/ceadigital/skip-trace-owner-phone-finder-python)
 [![Zero Charge on Misses](https://img.shields.io/badge/Miss_Guarantee-%240.00_on_Unfound_Leads-10B981?style=flat-square)](https://ceadigital.io/tools)
 
 Pierce anonymous real estate LLCs (`PALMETTO INDUSTRIAL HOLDINGS LLC` -> Managing Member human name), resolve verified wireless mobile phone numbers + deliverable emails, enrich with live **GLEIF LEI** & **U.S. Census Geocoder** coordinates, and run **U.S. Treasury OFAC SDN** KYB compliance checks in `<2s` over pure HTTP (`Accept-Encoding: gzip, deflate`, zero headless browser).
@@ -21,8 +20,7 @@ Pierce anonymous real estate LLCs (`PALMETTO INDUSTRIAL HOLDINGS LLC` -> Managin
 | **1-Click Google Sheets Custom Function (`=SKIPTRACE(A2, B2)`)** | **[https://ceadigital.io/templates/Code.gs](https://ceadigital.io/templates/Code.gs)** |
 | **1-Click n8n Native Workflow Template (`.workflow.json`)** | **[https://ceadigital.io/templates/skip-trace-owner-phone-finder.workflow.json](https://ceadigital.io/templates/skip-trace-owner-phone-finder.workflow.json)** |
 | **Clay.com HTTP API Column Blueprints** | **[https://ceadigital.io/templates/clay-http-column-blueprints.json](https://ceadigital.io/templates/clay-http-column-blueprints.json)** |
-| **Smithery MCP Registry** | **[https://smithery.ai/server/@ceadigital/skip-trace-owner-phone-finder-python](https://smithery.ai/server/@ceadigital/skip-trace-owner-phone-finder-python)** |
-| **Glama MCP Server Directory** | **[https://glama.ai/mcp/servers/@ceadigital/skip-trace-owner-phone-finder-python](https://glama.ai/mcp/servers/@ceadigital/skip-trace-owner-phone-finder-python)** |
+| **Glama MCP Server Directory** | **[https://glama.ai/mcp/servers/ceadigital/skip-trace-owner-phone-finder-python](https://glama.ai/mcp/servers/ceadigital/skip-trace-owner-phone-finder-python)** |
 
 ---
 
@@ -78,16 +76,11 @@ curl -sS -X POST "https://api.apify.com/v2/acts/cea_digital~skip-trace-owner-pho
 
 ---
 
-## Quickstart #3 — Model Context Protocol (MCP) for Claude, Cursor, Smithery & Glama
+## Quickstart #3 — Model Context Protocol (MCP) for Claude, Cursor & Glama
 
 ### Remote Streamable-HTTP MCP (Zero Install)
 ```bash
 claude mcp add --transport http ceadigital-b2a https://ceadigital.io/mcp
-```
-
-### Smithery 1-Click Install
-```bash
-npx -y @smithery/cli install @ceadigital/skip-trace-owner-phone-finder-python --client claude
 ```
 
 ### Local Stdio MCP Server (`mcp_server.py`)
