@@ -10,6 +10,8 @@ Pierce anonymous real estate LLCs (`PALMETTO INDUSTRIAL HOLDINGS LLC` -> Managin
 
 ---
 
+> **Permitted use:** Results come from public and third-party records for lawful business use. They are **not consumer reports**: do not use them for credit, employment, insurance or tenant-screening decisions (FCRA). Before calling or texting any number, follow the TCPA and Do-Not-Call rules. See [Compliance & permitted use](#compliance--permitted-use).
+
 ## 1-Click Ecosystem & No-Code Integrations
 
 | Platform / Channel | Direct Link |
@@ -103,3 +105,12 @@ claude mcp add --transport http ceadigital-b2a https://ceadigital.io/mcp
 ## License
 
 MIT License — Copyright (c) 2026 CEA Digital ([ceadigital.io](https://ceadigital.io))
+
+## Compliance & permitted use
+
+- **Not a consumer reporting agency (FCRA).** CEA Digital is not a consumer reporting agency, and results are not "consumer reports" under the Fair Credit Reporting Act (15 U.S.C. § 1681 et seq.). Do not use this data, in whole or in part, to decide anyone's eligibility for credit, insurance, employment, housing or tenancy, or for any other purpose covered by the FCRA.
+- **Calls and texts (TCPA).** Many returned numbers are wireless. Under the Telephone Consumer Protection Act (47 U.S.C. § 227), calls made with an autodialer or a prerecorded or artificial voice, and marketing texts, to wireless numbers generally require the recipient's prior express consent, and telemarketing requires prior express written consent. "Dialer-ready" columns are a file format, not consent. Obtaining consent is your responsibility.
+- **Do-Not-Call.** Before any telemarketing, scrub every number against the National Do Not Call Registry and applicable state DNC lists, and honor opt-out requests. Some states, such as Florida and Oklahoma, have stricter "mini-TCPA" laws.
+- **Email (CAN-SPAM).** Commercial emails must identify you as the sender, include a valid physical postal address and offer a working opt-out that you honor within 10 business days.
+- **Accuracy.** Records come from public and third-party sources and may be outdated or wrong. Verify before acting. Results are provided as-is.
+- **Your responsibility.** You are solely responsible for complying with all federal, state and local laws that apply to how you use this data. This section is general information, not legal advice.
